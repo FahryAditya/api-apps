@@ -3,6 +3,18 @@ name = "rust_project"
 version = "1.0.0"
 edition = "2024"
 
+[lib]
+name = "rust_project_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rust_project"
+path = "src/main.rs"
+
+[[bin]]
+name = "index"
+path = "api/index.rs"
+
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 axum = "0.8"
@@ -14,3 +26,7 @@ futures = "0.3"
 tower-http = { version = "0.6", features = ["cors"] }
 chrono = { version = "0.4", features = ["serde"] }
 rand = "0.9"
+vercel_runtime = { version = "2.4.1", features = ["axum"] }
+tower-service = "0.3.3"
+tower-layer = "0.3.3"
+http = "1.2"
