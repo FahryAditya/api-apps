@@ -1,0 +1,21 @@
+# Rust build artifacts
+/target
+Cargo.lock
+
+# Environment variables & secrets
+.env
+*.env
+
+# Old reference backend
+backend/
+node_modules/
+
+# Compiled output
+*.o
+*.so
+*.dll
+*.exe
+
+# Editor settings
+.vscode/
+.idea/
